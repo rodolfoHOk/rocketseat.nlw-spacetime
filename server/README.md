@@ -12,6 +12,9 @@
 
 ### 📚 Additional libraries 🗃️
 
+- eslint
+- @rocketseat/eslint-config
+
 ## 📃 Setup Guide (Portuguese) 📖
 
 - Iniciando projeto NodeJs: npm init -y
@@ -67,8 +70,8 @@
 
 ## 🔗 Projects repositories links ✨
 
-- [Server project](server)
+- [Server project](https://github.com/rodolfoHOk/rocketseat.nlw-spacetime/tree/main/server)
 
-- [Web project](web)
+- [Web project](https://github.com/rodolfoHOk/rocketseat.nlw-spacetime/tree/main/web)
 
-- [Mobile project](mobile)
+- [Mobile project](https://github.com/rodolfoHOk/rocketseat.nlw-spacetime/tree/main/mobile)

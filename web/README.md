@@ -5,10 +5,14 @@
 ## 👨‍💻 Main technologies 👩‍💻
 
 - Typescript
+- React JS
 - Next Js
 - Tailwind CSS
 
 ### 📚 Additional libraries 🗃️
+
+- @rocketseat/eslint-config
+- prettier-plugin-tailwindcss
 
 ## 📃 Setup Guide (Portuguese) 📖
 
@@ -16,8 +20,8 @@
 
 ## 🔗 Projects repositories links ✨
 
-- [Server project](server)
+- [Server project](https://github.com/rodolfoHOk/rocketseat.nlw-spacetime/tree/main/server)
 
-- [Web project](web)
+- [Web project](https://github.com/rodolfoHOk/rocketseat.nlw-spacetime/tree/main/web)
 
-- [Mobile project](mobile)
+- [Mobile project](https://github.com/rodolfoHOk/rocketseat.nlw-spacetime/tree/main/mobile)
