@@ -9,7 +9,6 @@
 - Fastify
 - Prisma
 - SQLite
-- EsLint
 
 ### 📚 Additional libraries 🗃️
 
