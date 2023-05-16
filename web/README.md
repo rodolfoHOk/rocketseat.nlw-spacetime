@@ -1,6 +1,6 @@
-# 🚀 NLW Spacetime - Server 🚀
+# 🚀 NLW Spacetime - Web 🚀
 
-> NLW Spacetime Server Project: created during RocketSeat's NLW Setup event
+> NLW Spacetime Web Project: created during RocketSeat's NLW Setup event
 
 ## 👨‍💻 Main technologies 👩‍💻
 

@@ -12,6 +12,9 @@
 - React Js
 - Next Js
 - Tailwind CSS
+- React Native
+- Expo
+- NativeWind (Tailwind CSS)
 
 ## Figma
 
