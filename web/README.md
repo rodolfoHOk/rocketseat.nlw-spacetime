@@ -13,6 +13,7 @@
 
 - @rocketseat/eslint-config
 - prettier-plugin-tailwindcss
+- lucide-react
 
 ## 📃 Setup Guide (Portuguese) 📖
 
