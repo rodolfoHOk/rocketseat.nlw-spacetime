@@ -14,6 +14,11 @@
 - eslint
 - @rocketseat/eslint-config
 - prettier-plugin-tailwindcss
+- @expo-google-fonts/bai-jamjuree
+- @expo-google-fonts/roboto
+- expo-font
+- react-native-svg
+- react-native-svg-transformer
 
 ## 📃 Setup Guide (Portuguese) 📖
 
@@ -24,6 +29,12 @@
 - [Expo.dev](https://docs.expo.dev/)
 
 - [NativeWind](https://www.nativewind.dev/quick-starts/expo)
+
+- [Expo google fonts](https://github.com/expo/google-fonts)
+
+- [Expo svg](https://docs.expo.dev/versions/latest/sdk/svg/)
+
+- [react-native-svg-transformer](https://github.com/kristerkari/react-native-svg-transformer)
 
 ## 🔗 Projects repositories links ✨
 
