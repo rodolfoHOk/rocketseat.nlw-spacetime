@@ -16,6 +16,7 @@
 - Expo
 - NativeWind (Tailwind CSS)
 - OAuth
+- JWT
 
 ## Figma
 

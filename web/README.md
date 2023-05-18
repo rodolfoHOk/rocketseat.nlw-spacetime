@@ -9,12 +9,15 @@
 - Next Js
 - Tailwind CSS
 - OAuth
+- JWT
 
 ### 📚 Additional libraries 🗃️
 
 - @rocketseat/eslint-config
 - prettier-plugin-tailwindcss
 - lucide-react
+- axios
+- jwt-decode
 
 ## 📃 Setup Guide (Portuguese) 📖
 
