@@ -8,6 +8,8 @@
 - React Native
 - Expo
 - NativeWind (Tailwind CSS)
+- OAuth
+- JWT
 
 ### 📚 Additional libraries 🗃️
 
@@ -68,3 +70,6 @@
 
 - Lesson 1 : SHOWMETHECODE
 - Lesson 2 : BUILDTHEFUTURE
+- Lesson 3 : NEVERSTOPLEARNING
+- Lesson 4 :
+- Lesson 5 :

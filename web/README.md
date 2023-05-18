@@ -18,10 +18,15 @@
 - lucide-react
 - axios
 - jwt-decode
+- @tailwindcss/forms
 
 ## 📃 Setup Guide (Portuguese) 📖
 
 - Criando um app NextJs: npx create-next-app@latest web --use-npm
+
+## Utils links
+
+- [tailwindcss-forms](https://github.com/tailwindlabs/tailwindcss-forms)
 
 ## 🔗 Projects repositories links ✨
 
