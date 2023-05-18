@@ -8,6 +8,7 @@
 - React JS
 - Next Js
 - Tailwind CSS
+- OAuth
 
 ### 📚 Additional libraries 🗃️
 

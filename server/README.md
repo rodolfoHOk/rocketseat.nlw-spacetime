@@ -77,6 +77,3 @@
 - [Web project](https://github.com/rodolfoHOk/rocketseat.nlw-spacetime/tree/main/web)
 
 - [Mobile project](https://github.com/rodolfoHOk/rocketseat.nlw-spacetime/tree/main/mobile)
-
-
-1:14:00

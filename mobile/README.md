@@ -47,3 +47,4 @@
 ## Code challenge
 
 - Lesson 1 : SHOWMETHECODE
+- Lesson 2 : BUILDTHEFUTURE

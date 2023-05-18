@@ -15,6 +15,7 @@
 - React Native
 - Expo
 - NativeWind (Tailwind CSS)
+- OAuth
 
 ## Figma
 
