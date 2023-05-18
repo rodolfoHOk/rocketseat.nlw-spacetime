@@ -9,6 +9,8 @@
 - Fastify
 - Prisma
 - SQLite
+- OAuth
+- JWT
 
 ### 📚 Additional libraries 🗃️
 
@@ -16,6 +18,9 @@
 - @rocketseat/eslint-config
 - zod
 - @fastify/cors
+- dotenv
+- axios
+- @fastify/jwt
 
 ## 📃 Setup Guide (Portuguese) 📖
 

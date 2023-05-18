@@ -1,12 +1,17 @@
-###
-GET http://localhost:3333/memories
+@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiUm9kb2xmbyBIIE9raW5vIiwiYXZhdGFyVXJsIjoiaHR0cHM6Ly9hdmF0YXJzLmdpdGh1YnVzZXJjb250ZW50LmNvbS91LzU3NDYzODQ4P3Y9NCIsInN1YiI6ImY2YWEyODEyLTAyYTktNGFkNi1iM2Y1LTg5YTJjZWRkNmZlYiIsImlhdCI6MTY4NDM3Mzc2OCwiZXhwIjoxNjg2OTY1NzY4fQ.UuXwUWPDH4F-i4fnVm9SyvkPKwhRFO5hOz3cAXVo5m4
 
 ###
-GET http://localhost:3333/memories/0d3ba7f3-4f76-4333-b06b-61fa968e57e8
+GET http://localhost:3333/memories
+Authorization: Bearer {{token}}
+
+###
+GET http://localhost:3333/memories/c7e125a2-2295-4756-aadc-8522e8e568dc
+Authorization: Bearer {{token}}
 
 ###
 POST http://localhost:3333/memories
 Content-Type: application/json
+Authorization: Bearer {{token}}
 
 {
   "content": "test",
@@ -15,14 +20,24 @@ Content-Type: application/json
 }
 
 ###
-PUT http://localhost:3333/memories/d5d4df3a-20d5-46c4-9591-dd1f6064cf16
+PUT http://localhost:3333/memories/c7e125a2-2295-4756-aadc-8522e8e568dc
 Content-Type: application/json
+Authorization: Bearer {{token}}
 
 {
   "content": "test update",
-  "coverUrl": "https://github.com/diego3g.png",
+  "coverUrl": "https://github.com/rodolfoHOk.png",
   "isPublic": 1
 }
 
 ###
-DELETE http://localhost:3333/memories/d5d4df3a-20d5-46c4-9591-dd1f6064cf16
+DELETE http://localhost:3333/memories/c7e125a2-2295-4756-aadc-8522e8e568dc
+Authorization: Bearer {{token}}
+
+###
+POST http://localhost:3333/register
+Content-Type: application/json
+
+{
+  "code": "69c2ff30a3151a841fae"
+}
