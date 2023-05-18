@@ -19,6 +19,16 @@
 - expo-font
 - react-native-svg
 - react-native-svg-transformer
+- expo-auth-session
+- expo-crypto
+- axios
+- expo-secure-store
+- expo-router
+- react-native-safe-area-context
+- react-native-screens
+- expo-linking
+- expo-constants
+- expo-status-bar
 
 ## 📃 Setup Guide (Portuguese) 📖
 
@@ -35,6 +45,16 @@
 - [Expo svg](https://docs.expo.dev/versions/latest/sdk/svg/)
 
 - [react-native-svg-transformer](https://github.com/kristerkari/react-native-svg-transformer)
+
+- [Expo AuthSession](https://docs.expo.dev/versions/latest/sdk/auth-session/)
+
+- [Expo Authentication guide](https://docs.expo.dev/guides/authentication/)
+
+- [Expo SecureStore](https://docs.expo.dev/versions/latest/sdk/securestore/)
+
+- [Expo Router](https://docs.expo.dev/guides/routing-and-navigation/)
+
+- [Expo Router Documentation](https://expo.github.io/router/docs/)
 
 ## 🔗 Projects repositories links ✨
 
