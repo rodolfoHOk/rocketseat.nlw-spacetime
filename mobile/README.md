@@ -71,5 +71,5 @@
 - Lesson 1 : SHOWMETHECODE
 - Lesson 2 : BUILDTHEFUTURE
 - Lesson 3 : NEVERSTOPLEARNING
-- Lesson 4 :
+- Lesson 4 : NEXTLEVELWEEK
 - Lesson 5 :

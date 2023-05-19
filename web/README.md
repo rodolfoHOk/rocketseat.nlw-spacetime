@@ -19,6 +19,8 @@
 - axios
 - jwt-decode
 - @tailwindcss/forms
+- js-cookie
+- @types/js-cookie
 
 ## 📃 Setup Guide (Portuguese) 📖
 
