@@ -21,6 +21,8 @@
 - dotenv
 - axios
 - @fastify/jwt
+- @fastify/multipart
+- @fastify/static
 
 ## 📃 Setup Guide (Portuguese) 📖
 
