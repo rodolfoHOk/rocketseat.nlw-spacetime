@@ -96,7 +96,7 @@ export default function Memories() {
                 {memory.excerpt}
               </Text>
 
-              <Link href="/memories/:id" asChild>
+              <Link href={`/memories/${memory.id}`} asChild>
                 <TouchableOpacity className="flex-row items-center gap-2">
                   <Text className="font-body text-sm text-gray-200">
                     Ler mais
