@@ -32,6 +32,7 @@
 - expo-constants
 - expo-status-bar
 - expo-image-picker
+- dayjs
 
 ## 📃 Setup Guide (Portuguese) 📖
 
