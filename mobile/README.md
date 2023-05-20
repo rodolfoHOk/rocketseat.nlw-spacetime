@@ -31,6 +31,7 @@
 - expo-linking
 - expo-constants
 - expo-status-bar
+- expo-image-picker
 
 ## 📃 Setup Guide (Portuguese) 📖
 
@@ -57,6 +58,8 @@
 - [Expo Router](https://docs.expo.dev/guides/routing-and-navigation/)
 
 - [Expo Router Documentation](https://expo.github.io/router/docs/)
+
+- [Expo ImagePicker](https://docs.expo.dev/versions/latest/sdk/imagepicker/)
 
 ## 🔗 Projects repositories links ✨
 
