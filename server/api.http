@@ -31,7 +31,7 @@ Authorization: Bearer {{token}}
 }
 
 ###
-DELETE http://localhost:3333/memories/60326518-a0ee-467e-8fa7-b968c8e13063
+DELETE http://localhost:3333/memories/cffd2156-2582-4897-b58a-736475c790e4
 Authorization: Bearer {{token}}
 
 ###

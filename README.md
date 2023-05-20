@@ -29,5 +29,3 @@
 - [Web project](web)
 
 - [Mobile project](mobile)
-
-5: 37:33

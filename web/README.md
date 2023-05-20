@@ -21,6 +21,7 @@
 - @tailwindcss/forms
 - js-cookie
 - @types/js-cookie
+- dayjs
 
 ## 📃 Setup Guide (Portuguese) 📖
 
