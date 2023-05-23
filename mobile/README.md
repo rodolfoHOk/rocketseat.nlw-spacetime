@@ -69,11 +69,3 @@
 - [Web project](https://github.com/rodolfoHOk/rocketseat.nlw-spacetime/tree/main/web)
 
 - [Mobile project](https://github.com/rodolfoHOk/rocketseat.nlw-spacetime/tree/main/mobile)
-
-## Code challenge
-
-- Lesson 1 : SHOWMETHECODE
-- Lesson 2 : BUILDTHEFUTURE
-- Lesson 3 : NEVERSTOPLEARNING
-- Lesson 4 : NEXTLEVELWEEK
-- Lesson 5 : IGNITE

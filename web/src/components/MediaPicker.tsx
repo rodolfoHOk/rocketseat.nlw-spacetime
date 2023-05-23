@@ -1,8 +1,12 @@
 'use client'
 
-import { ChangeEvent, useState } from 'react'
+import { ChangeEvent, useEffect, useState } from 'react'
 
-export function MediaPicker() {
+interface MediaPickerProps {
+  coverUrl?: string
+}
+
+export function MediaPicker({ coverUrl }: MediaPickerProps) {
   const [preview, setPreview] = useState<string | null>(null)
 
   function onFileSelected(event: ChangeEvent<HTMLInputElement>) {
@@ -15,6 +19,12 @@ export function MediaPicker() {
     const previewUrl = URL.createObjectURL(files[0])
     setPreview(previewUrl)
   }
+
+  useEffect(() => {
+    if (coverUrl) {
+      setPreview(coverUrl)
+    }
+  }, [coverUrl])
 
   return (
     <>

@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { ChevronLeft } from 'lucide-react'
-import { NewMemoryForm } from '@/components/NewMemoryForm'
+import { MemoryForm } from '@/components/MemoryForm'
 
 export default function NewMemory() {
   return (
@@ -13,7 +13,7 @@ export default function NewMemory() {
         voltar à timeline
       </Link>
 
-      <NewMemoryForm />
+      <MemoryForm />
     </div>
   )
 }
