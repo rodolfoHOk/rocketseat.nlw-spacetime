@@ -4,6 +4,7 @@ import { ChevronLeft } from 'lucide-react'
 
 import { api } from '@/lib/api'
 import { MemoryForm } from '@/components/MemoryForm'
+import { ShareButton } from '@/components/ShareButton'
 
 interface Memory {
   id: string
@@ -35,6 +36,8 @@ export default async function EditMemory({
         <ChevronLeft className="h-4 w-4" />
         voltar à timeline
       </Link>
+
+      {memory.isPublic && <ShareButton />}
 
       <MemoryForm memory={memory} />
     </div>

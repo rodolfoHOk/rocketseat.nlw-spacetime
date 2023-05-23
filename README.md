@@ -69,6 +69,6 @@
 ## Next Level ideas (portuguese)
 
 - Detalhes da memória e Edição de memória (ok implementado)
-- Link para compartilhar memória
+- Link para compartilhar memória (ok implementado)
 - Selecionar data da memória (dica: Expo DateTimePicker)
 - Layout responsivo no web
