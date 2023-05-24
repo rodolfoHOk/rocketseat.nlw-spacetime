@@ -16,7 +16,7 @@ export async function memoriesRoutes(app: FastifyInstance) {
         userId: request.user.sub,
       },
       orderBy: {
-        createdAt: 'asc',
+        memoryDate: 'asc',
       },
     })
 
@@ -66,7 +66,7 @@ export async function memoriesRoutes(app: FastifyInstance) {
     const memory = await prisma.memory.create({
       data: {
         userId: request.user.sub,
-        memoryDate,
+        memoryDate: new Date(memoryDate),
         content,
         coverUrl,
         isPublic,
@@ -104,12 +104,14 @@ export async function memoriesRoutes(app: FastifyInstance) {
       return reply.status(401).send()
     }
 
+    console.log(memoryDate)
+
     memory = await prisma.memory.update({
       where: {
         id,
       },
       data: {
-        memoryDate,
+        memoryDate: new Date(memoryDate),
         content,
         coverUrl,
         isPublic,

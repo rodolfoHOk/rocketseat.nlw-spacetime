@@ -11,6 +11,7 @@ import { api } from '@/lib/api'
 interface Memory {
   id?: string
   userId: string
+  memoryDate: string
   coverUrl: string
   content: string
   isPublic: boolean
@@ -35,6 +36,7 @@ export function MemoryForm({ memory }: MemoryFormProps) {
   const [memoryForm, setMemoryForm] = useState<Memory>({
     id: '',
     userId: '',
+    memoryDate: '',
     coverUrl: '',
     content: '',
     isPublic: false,
@@ -66,6 +68,7 @@ export function MemoryForm({ memory }: MemoryFormProps) {
         `/memories/${memory.id}`,
         {
           coverUrl: coverUrl || memoryForm.coverUrl,
+          memoryDate: new Date(memoryForm.memoryDate).toISOString(),
           content: memoryForm.content,
           isPublic: memoryForm.isPublic,
         },
@@ -80,6 +83,7 @@ export function MemoryForm({ memory }: MemoryFormProps) {
         '/memories',
         {
           coverUrl,
+          memoryDate: new Date(memoryForm.memoryDate).toISOString(),
           content: memoryForm.content,
           isPublic: memoryForm.isPublic,
         },
@@ -96,13 +100,35 @@ export function MemoryForm({ memory }: MemoryFormProps) {
 
   useEffect(() => {
     if (memory) {
-      setMemoryForm(memory)
+      setMemoryForm({
+        ...memory,
+        memoryDate: new Date(memory.memoryDate).toISOString().split('T')[0],
+      })
     }
   }, [memory])
 
   return (
     <form className="flex flex-1 flex-col gap-2" onSubmit={handleSaveMemory}>
       <div className="flex items-center gap-4">
+        <label
+          htmlFor="isPublic"
+          className="flex cursor-pointer items-center gap-1.5 text-sm text-gray-200 hover:text-gray-100"
+        >
+          <input
+            type="date"
+            name="memoryDate"
+            id="memoryDate"
+            defaultValue={memoryForm.memoryDate}
+            onChange={(event) =>
+              setMemoryForm((previous) => ({
+                ...previous,
+                memoryDate: event.target.value,
+              }))
+            }
+            className="rounded-lg border-gray-400 bg-gray-700 text-sm text-gray-200"
+          />
+        </label>
+
         <label
           htmlFor="media"
           className="flex cursor-pointer items-center gap-1.5 text-sm text-gray-200 hover:text-gray-100"
@@ -122,8 +148,8 @@ export function MemoryForm({ memory }: MemoryFormProps) {
             value="true"
             checked={memoryForm.isPublic}
             onChange={(event) =>
-              setMemoryForm((previus) => ({
-                ...previus,
+              setMemoryForm((previous) => ({
+                ...previous,
                 isPublic: !memoryForm?.isPublic,
               }))
             }
@@ -142,7 +168,10 @@ export function MemoryForm({ memory }: MemoryFormProps) {
         placeholder="Fique livre para adicionar fotos, vídeos e relatos sobre essa experiência que você quer lembrar para sempre."
         value={memoryForm.content}
         onChange={(event) =>
-          setMemoryForm({ ...memoryForm, content: event.target.value })
+          setMemoryForm((previous) => ({
+            ...previous,
+            content: event.target.value,
+          }))
         }
       />
 
