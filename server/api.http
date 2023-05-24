@@ -1,4 +1,4 @@
-@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiUm9kb2xmbyBIIE9raW5vIiwiYXZhdGFyVXJsIjoiaHR0cHM6Ly9hdmF0YXJzLmdpdGh1YnVzZXJjb250ZW50LmNvbS91LzU3NDYzODQ4P3Y9NCIsInN1YiI6ImY2YWEyODEyLTAyYTktNGFkNi1iM2Y1LTg5YTJjZWRkNmZlYiIsImlhdCI6MTY4NDM3Mzc2OCwiZXhwIjoxNjg2OTY1NzY4fQ.UuXwUWPDH4F-i4fnVm9SyvkPKwhRFO5hOz3cAXVo5m4
+@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiUm9kb2xmbyBIIE9raW5vIiwiYXZhdGFyVXJsIjoiaHR0cHM6Ly9hdmF0YXJzLmdpdGh1YnVzZXJjb250ZW50LmNvbS91LzU3NDYzODQ4P3Y9NCIsInN1YiI6Ijc5OGU5Y2YzLTQ1MmEtNGExNi05NjdlLTQ3MTNjNWFlYjRhOSIsImlhdCI6MTY4NDkzMzQ5OSwiZXhwIjoxNjg3NTI1NDk5fQ.ZgB1DftOziSWcRGPdY3KPQdXTSe9Dwpbr5cAYcJKQ0k
 
 ###
 GET http://localhost:3333/memories
@@ -14,24 +14,26 @@ Content-Type: application/json
 Authorization: Bearer {{token}}
 
 {
+  "memoryDate": "2021-02-01T00:00:00.000Z",
   "content": "test",
   "coverUrl": "https://github.com/diego3g.png",
   "isPublic": 1
 }
 
 ###
-PUT http://localhost:3333/memories/c7e125a2-2295-4756-aadc-8522e8e568dc
+PUT http://localhost:3333/memories/83977ef0-2360-41c3-84dc-7c67711eea63
 Content-Type: application/json
 Authorization: Bearer {{token}}
 
 {
+  "memoryDate": "2021-02-02T00:00:00.000Z",
   "content": "test update",
   "coverUrl": "https://github.com/rodolfoHOk.png",
   "isPublic": 1
 }
 
 ###
-DELETE http://localhost:3333/memories/f4fefc24-84cc-4a06-b381-c4040f6ae871
+DELETE http://localhost:3333/memories/83977ef0-2360-41c3-84dc-7c67711eea63
 Authorization: Bearer {{token}}
 
 ###
