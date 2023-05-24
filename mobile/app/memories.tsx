@@ -13,6 +13,7 @@ import { api } from '../src/lib/api'
 dayjs.locale(ptBr)
 
 interface Memory {
+  memoryDate: string
   coverUrl: string
   excerpt: string
   id: string
@@ -79,7 +80,9 @@ export default function Memories() {
               <View className="h-px w-5 bg-gray-50" />
 
               <Text className="font-body text-xs text-gray-100">
-                {dayjs(memory.createdAt).format('D[ de ]MMMM[, ]YYYY')}
+                {dayjs(memory.memoryDate.split('T')[0]).format(
+                  'D[ de ]MMMM[, ]YYYY',
+                )}
               </Text>
             </View>
 

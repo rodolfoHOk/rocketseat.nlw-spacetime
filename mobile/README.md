@@ -33,6 +33,7 @@
 - expo-status-bar
 - expo-image-picker
 - dayjs
+- @react-native-community/datetimepicker
 
 ## 📃 Setup Guide (Portuguese) 📖
 
@@ -61,6 +62,8 @@
 - [Expo Router Documentation](https://expo.github.io/router/docs/)
 
 - [Expo ImagePicker](https://docs.expo.dev/versions/latest/sdk/imagepicker/)
+
+- [Expo DateTimePicker](https://docs.expo.dev/versions/latest/sdk/date-time-picker/)
 
 ## 🔗 Projects repositories links ✨
 

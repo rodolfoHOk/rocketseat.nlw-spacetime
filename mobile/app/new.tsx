@@ -1,5 +1,6 @@
 import {
   Image,
+  Platform,
   ScrollView,
   Switch,
   Text,
@@ -12,12 +13,27 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import Icon from '@expo/vector-icons/Feather'
 import * as ImagePicker from 'expo-image-picker'
 import * as SecureStore from 'expo-secure-store'
+import DateTimePicker from '@react-native-community/datetimepicker'
 
 import NLWLogo from '../src/assets/nlw-spacetime-logo.svg'
 import { useState } from 'react'
 import { api } from '../src/lib/api'
+import dayjs from 'dayjs'
 
 export default function NewMemory() {
+  // test
+  const [datePicker, setDatePicker] = useState(false)
+  const [memoryDate, setMemoryDate] = useState(new Date())
+
+  function showDatePicker() {
+    setDatePicker(true)
+  }
+
+  function onDateSelected(event, value) {
+    setMemoryDate(value)
+    setDatePicker(false)
+  }
+  // end test
   const router = useRouter()
 
   const { bottom, top } = useSafeAreaInsets()
@@ -67,6 +83,7 @@ export default function NewMemory() {
     await api.post(
       '/memories',
       {
+        memoryDate,
         content,
         isPublic,
         coverUrl,
@@ -97,6 +114,39 @@ export default function NewMemory() {
       </View>
 
       <View className="mt-6 space-y-6">
+        {/* Test */}
+        <View>
+          {datePicker && (
+            <DateTimePicker
+              value={memoryDate}
+              mode={'date'}
+              display={Platform.OS === 'ios' ? 'spinner' : 'default'}
+              is24Hour={true}
+              onChange={onDateSelected}
+            />
+          )}
+
+          <View className="flex-row items-center gap-2">
+            <Text className="font-body text-base text-gray-200">
+              Data da memória
+            </Text>
+
+            <TouchableOpacity
+              onPress={showDatePicker}
+              className="h-10 w-36 flex-row items-center justify-between rounded-lg border border-gray-400 bg-gray-700 px-4 font-body"
+            >
+              <Icon name="calendar" color="#FFF" size={16} />
+
+              <Text className="text-gray-100">
+                {dayjs(memoryDate.toISOString().split('T')[0]).format(
+                  'DD/MM/YYYY',
+                )}
+              </Text>
+            </TouchableOpacity>
+          </View>
+        </View>
+        {/* End test */}
+
         <View className="flex-row items-center gap-2">
           <Switch
             value={isPublic}
