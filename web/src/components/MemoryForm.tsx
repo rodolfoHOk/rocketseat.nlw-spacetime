@@ -109,7 +109,7 @@ export function MemoryForm({ memory }: MemoryFormProps) {
 
   return (
     <form className="flex flex-1 flex-col gap-2" onSubmit={handleSaveMemory}>
-      <div className="flex items-center gap-4">
+      <div className="flex flex-col gap-4 md:flex-row md:items-center">
         <label
           htmlFor="isPublic"
           className="flex cursor-pointer items-center gap-1.5 text-sm text-gray-200 hover:text-gray-100"
@@ -128,35 +128,36 @@ export function MemoryForm({ memory }: MemoryFormProps) {
             className="rounded-lg border-gray-400 bg-gray-700 text-sm text-gray-200"
           />
         </label>
+        <div className="flex flex-row items-center justify-between gap-4">
+          <label
+            htmlFor="media"
+            className="flex cursor-pointer items-center gap-1.5 text-sm text-gray-200 hover:text-gray-100"
+          >
+            <ImagePlus className="h-4 w-4" />
+            Anexar mídia
+          </label>
 
-        <label
-          htmlFor="media"
-          className="flex cursor-pointer items-center gap-1.5 text-sm text-gray-200 hover:text-gray-100"
-        >
-          <ImagePlus className="h-4 w-4" />
-          Anexar mídia
-        </label>
-
-        <label
-          htmlFor="isPublic"
-          className="flex cursor-pointer items-center gap-1.5 text-sm text-gray-200 hover:text-gray-100"
-        >
-          <input
-            type="checkbox"
-            name="isPublic"
-            id="isPublic"
-            value="true"
-            checked={memoryForm.isPublic}
-            onChange={(event) =>
-              setMemoryForm((previous) => ({
-                ...previous,
-                isPublic: !memoryForm?.isPublic,
-              }))
-            }
-            className="h-4 w-4 rounded border-gray-400 bg-gray-700 text-purple-500"
-          />
-          Tornar memória pública
-        </label>
+          <label
+            htmlFor="isPublic"
+            className="flex cursor-pointer items-center gap-1.5 text-sm text-gray-200 hover:text-gray-100"
+          >
+            <input
+              type="checkbox"
+              name="isPublic"
+              id="isPublic"
+              value="true"
+              checked={memoryForm.isPublic}
+              onChange={(event) =>
+                setMemoryForm((previous) => ({
+                  ...previous,
+                  isPublic: !memoryForm?.isPublic,
+                }))
+              }
+              className="h-4 w-4 rounded border-gray-400 bg-gray-700 text-purple-500"
+            />
+            Tornar memória pública
+          </label>
+        </div>
       </div>
 
       <MediaPicker coverUrl={memoryForm.coverUrl} />

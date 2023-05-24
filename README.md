@@ -71,4 +71,4 @@
 - Detalhes da memória e Edição de memória (ok implementado web)
 - Link para compartilhar memória (ok implementado web)
 - Selecionar data da memória (dica: Expo DateTimePicker) (ok implementado web)
-- Layout responsivo no web
+- Layout responsivo no web (ok implementado web)
