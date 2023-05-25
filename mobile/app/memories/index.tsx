@@ -6,9 +6,9 @@ import * as SecureStore from 'expo-secure-store'
 import dayjs from 'dayjs'
 import ptBr from 'dayjs/locale/pt-br'
 
-import NLWLogo from '../src/assets/nlw-spacetime-logo.svg'
+import NLWLogo from '../../src/assets/nlw-spacetime-logo.svg'
 import { useEffect, useState } from 'react'
-import { api } from '../src/lib/api'
+import { api } from '../../src/lib/api'
 
 dayjs.locale(ptBr)
 
