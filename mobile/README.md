@@ -34,6 +34,7 @@
 - expo-image-picker
 - dayjs
 - @react-native-community/datetimepicker
+- expo-clipboard
 
 ## 📃 Setup Guide (Portuguese) 📖
 
@@ -64,6 +65,8 @@
 - [Expo ImagePicker](https://docs.expo.dev/versions/latest/sdk/imagepicker/)
 
 - [Expo DateTimePicker](https://docs.expo.dev/versions/latest/sdk/date-time-picker/)
+
+- [Expo Clipboard](https://docs.expo.dev/versions/latest/sdk/clipboard/)
 
 ## 🔗 Projects repositories links ✨
 

@@ -66,9 +66,9 @@
 
 - [Mobile project](mobile)
 
-## Next Level ideas (portuguese)
+## Next Level / O que fiz além das lições do evento (portuguese)
 
 - Detalhes da memória e Edição de memória (ok implementado web e mobile)
-- Link para compartilhar memória (ok implementado web)
+- Link para compartilhar memória (ok implementado web e mobile)
 - Selecionar data da memória (dica: Expo DateTimePicker) (ok implementado web e mobile)
-- Layout responsivo no web (ok implementado web)
+- Layout responsivo no web (ok implementado)

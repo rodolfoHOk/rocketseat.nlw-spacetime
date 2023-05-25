@@ -15,6 +15,7 @@ import Icon from '@expo/vector-icons/Feather'
 import * as ImagePicker from 'expo-image-picker'
 import DateTimePicker from '@react-native-community/datetimepicker'
 import dayjs from 'dayjs'
+import * as Clipboard from 'expo-clipboard'
 
 import NLWLogo from '../../src/assets/nlw-spacetime-logo.svg'
 
@@ -75,6 +76,12 @@ export default function MemoryForm({
     }
   }
 
+  async function copyToClipboard() {
+    await Clipboard.setStringAsync(
+      `http://localhost:3000/memories/${memory.id}`,
+    )
+  }
+
   useEffect(() => {
     if (memory) {
       setMemoryDate(new Date(memory.memoryDate))
@@ -91,6 +98,15 @@ export default function MemoryForm({
     >
       <View className="mt-4 flex-row items-center justify-between">
         <NLWLogo />
+
+        {memory?.isPublic && (
+          <TouchableOpacity
+            onPress={copyToClipboard}
+            className="h-10 w-10 items-center justify-center rounded-full bg-orange-500"
+          >
+            <Icon name="share-2" size={16} color="#FFF" />
+          </TouchableOpacity>
+        )}
 
         <Link href="/memories" asChild>
           <TouchableOpacity className="h-10 w-10 items-center justify-center rounded-full bg-purple-500">
