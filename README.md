@@ -77,6 +77,7 @@ Server project: memories routes - post
 - Link para compartilhar memória (ok implementado web e mobile)
 - Selecionar data da memória (dica: Expo DateTimePicker) (ok implementado web e mobile)
 - Layout responsivo no web (ok implementado)
+- No server verificar se é mobile ou web para efetuar a autenticação usando as variáveis de ambiente de acordo (ok implementado)
 
 ## Run
 

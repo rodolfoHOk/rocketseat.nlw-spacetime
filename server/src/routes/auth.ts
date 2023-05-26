@@ -5,6 +5,8 @@ import { z } from 'zod'
 import { prisma } from '../lib/prisma'
 
 export async function authRoutes(app: FastifyInstance) {
+  const userAgentList = ['okhttp', 'Dalvik', 'AppleWebKit', 'Darwin']
+
   app.post('/register', async (request) => {
     const bodySchema = z.object({
       code: z.string(),
@@ -12,13 +14,22 @@ export async function authRoutes(app: FastifyInstance) {
 
     const { code } = bodySchema.parse(request.body)
 
+    const userAgent = request.headers['user-agent']
+    const isMobile =
+      userAgent &&
+      userAgentList.filter((ua) => userAgent.includes(ua)).length > 0
+
     const accessTokenResponse = await axios.post(
       'https://github.com/login/oauth/access_token',
       null,
       {
         params: {
-          client_id: process.env.GITHUB_CLIENT_ID,
-          client_secret: process.env.GITHUB_CLIENT_SECRET,
+          client_id: isMobile
+            ? process.env.GITHUB_MOBILE_CLIENT_ID
+            : process.env.GITHUB_WEB_CLIENT_ID,
+          client_secret: isMobile
+            ? process.env.GITHUB_MOBILE_CLIENT_SECRET
+            : process.env.GITHUB_WEB_CLIENT_SECRET,
           code,
         },
         headers: {

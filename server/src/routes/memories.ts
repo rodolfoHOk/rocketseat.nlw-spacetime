@@ -4,8 +4,12 @@ import { z } from 'zod'
 import { prisma } from '../lib/prisma'
 
 export async function memoriesRoutes(app: FastifyInstance) {
-  app.addHook('preHandler', async (request) => {
-    await request.jwtVerify() // todas as requisições desta rota
+  app.addHook('preHandler', async (request, reply) => {
+    try {
+      await request.jwtVerify() // todas as requisições desta rota
+    } catch (err) {
+      reply.send(err)
+    }
   })
 
   app.get('/memories', async (request) => {
