@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useCallback, useEffect } from 'react'
 import { View, TouchableOpacity, Text } from 'react-native'
 import { useRouter } from 'expo-router'
 import { useAuthRequest, makeRedirectUri } from 'expo-auth-session'
@@ -28,17 +28,20 @@ export default function App() {
     discovery,
   )
 
-  async function handleGithubOAuthCode(code: string) {
-    const response = await api.post('/register', {
-      code,
-    })
+  const handleGithubOAuthCode = useCallback(
+    async (code: string) => {
+      const response = await api.post('/register', {
+        code,
+      })
 
-    const { token } = response.data
+      const { token } = response.data
 
-    await SecureStore.setItemAsync('token', token)
+      await SecureStore.setItemAsync('token', token)
 
-    router.push('/memories')
-  }
+      router.push('/memories')
+    },
+    [router],
+  )
 
   useEffect(() => {
     // console.log(
@@ -52,7 +55,7 @@ export default function App() {
 
       handleGithubOAuthCode(code)
     }
-  }, [response])
+  }, [response, handleGithubOAuthCode])
 
   return (
     <View className="flex-1 items-center px-8 py-10">
