@@ -1,5 +1,5 @@
 import { Image, ScrollView, Text, TouchableOpacity, View } from 'react-native'
-import { Link, useRouter } from 'expo-router'
+import { Link, useFocusEffect, useRouter } from 'expo-router'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import Icon from '@expo/vector-icons/Feather'
 import * as SecureStore from 'expo-secure-store'
@@ -7,7 +7,7 @@ import dayjs from 'dayjs'
 import ptBr from 'dayjs/locale/pt-br'
 
 import NLWLogo from '../../src/assets/nlw-spacetime-logo.svg'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { api } from '../../src/lib/api'
 
 dayjs.locale(ptBr)
@@ -30,7 +30,7 @@ export default function Memories() {
   async function signOut() {
     await SecureStore.deleteItemAsync('token')
 
-    router.push('/')
+    router.push('/') // not working issues: https://github.com/expo/router/issues/365
   }
 
   async function loadMemories() {
@@ -45,9 +45,9 @@ export default function Memories() {
     setMemories(memoriesResponse.data)
   }
 
-  useEffect(() => {
+  useFocusEffect(() => {
     loadMemories()
-  }, [])
+  })
 
   return (
     <ScrollView
